@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form onsubmit="guessNumber()">
         <label for="number">Guess number between 1-100</label>
-        <input type="number">
-        <button type="button">Submit</button>
+        <input type="number" id="guessNumber" min="0" max="100">
+        <button type="button" id="button">Submit</button>
     </form>
 
 

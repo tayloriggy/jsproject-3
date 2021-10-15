@@ -16,13 +16,13 @@ Use while loop to set numberOfGuesses to 3? Once it gets to a third guess, print
 the picked number is right or wrong.
 */
 
-let randomNum = Math.floor(Math.random() * 100 + 1); //generates a computer randomized number between 1-100
+let randomNum = Math.floor(Math.random() * 100 + 1); //generates a computer randomized number between 1-100, is a number 
 let numberOfGuesses = 1; //counts the number of guesses made for correct guess 
 
 
 document.getElementById("button").onclick = function guessNumber() {
-    let numberGuessed = document.getElementById("number").value;
-    numberGuessed = parseInt(document.getElementById("number").value);
+    let numberGuessed = document.getElementById("number").value; //this input value is a string
+    numberGuessed = parseInt(document.getElementById("number").value); //converting string of input value to a number using parseInt() method so === works
 
     if (numberGuessed === randomNum) {
         alert ("You got it! The game has been reset.");

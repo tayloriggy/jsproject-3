@@ -22,6 +22,7 @@ let numberOfGuesses = 1; //counts the number of guesses made for correct guess
 
 document.getElementById("button").onclick = function guessNumber() {
     let numberGuessed = document.getElementById("number").value;
+    numberGuessed = parseInt(document.getElementById("number").value);
 
     if (numberGuessed === randomNum) {
         alert ("You got it! The game has been reset.");
@@ -33,7 +34,7 @@ document.getElementById("button").onclick = function guessNumber() {
         alert ("Too high");
     }
 
-    else if (numberOfGuesses < 3) {
+    else if (numberGuessed < randomNum && numberOfGuesses < 3) {
         numberOfGuesses++;
         alert ("Too low");
     }
